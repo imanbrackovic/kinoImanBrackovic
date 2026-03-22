@@ -45,16 +45,25 @@ body {
 .film {
     background-color: white;
     border: 1px solid #c8c8c8;
-    padding: 15px;
-    min-height: 80px;
+    overflow: hidden;
 }
 
-.film h3 {
+.poster {
+    height: 220px;
+    background-color: #cfcfcf;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.info {
+    padding: 12px;
+}
+
+.info h3 {
     margin: 0 0 8px 0;
     font-size: 20px;
 }
 
-.film p {
+.info p {
     margin: 0;
     font-size: 16px;
 }
