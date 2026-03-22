@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+#meni {
+    background-color: #ececf1;
+    padding: 15px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+#meni {
+    background-color: #ececf1;
+    padding: 15px;
+}
+
+#meni a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+#sadrzaj {
+    padding: 20px;
+}
+
+.sekcija {
+    margin-bottom: 30px;
+}
+
+.naslov-sekcije {
+    background-color: #f3f3f3;
+    border: 1px solid #b5b5b5;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.film {
+    border: 1px solid #c0c0c0;
+    background-color: #fafafa;
+    padding: 10px;
+    margin-top: 10px;
+}
