@@ -6,17 +6,17 @@ body {
     margin: 0;
     min-width: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 #meni {
     list-style: none;
     margin: 0;
     padding: 14px 20px;
-    background-color: #dedee2;
+    background-color: #e5e7eb;
     display: flex;
-    gap: 28px;
+    gap: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -30,22 +30,21 @@ body {
 
 #meni a {
     display: inline-block;
-    text-decoration: none;
-    color: black;
-    background-color: #f5f5f5;
-    border: 1px solid #9a9a9a;
-    padding: 10px 24px;
-    min-width: 110px;
+    min-width: 120px;
+    padding: 10px 20px;
     text-align: center;
-    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f5f5f5;
+    border: 1px solid #9c9c9c;
 }
 
 #meni a.aktivno {
-    background-color: #aeb7c3;
+    background-color: #cfd4db;
 }
 
 #sadrzaj {
-    padding: 90px 20px 30px 20px;
+    padding: 95px 20px 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +94,8 @@ body {
 }
 
 #sala-wrapper {
+    width: 100%;
+    overflow-x: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 42px;
@@ -144,8 +145,8 @@ body {
     padding: 10px 16px;
     display: flex;
     justify-content: center;
-    gap: 28px;
     align-items: center;
+    gap: 28px;
 }
 
 .stavka-legende {
@@ -164,17 +165,6 @@ body {
 }
 
 @media (max-width: 700px) {
-    #meni {
-        position: static;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 12px;
-    }
-
-    #sadrzaj {
-        padding-top: 20px;
-    }
-
     #podaci-o-filmu,
     #platno,
     #legenda {
@@ -190,9 +180,31 @@ body {
     .info-kutija {
         width: 100%;
     }
+
+    #legenda {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
+    #meni {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    #meni li,
+    #meni a {
+        width: 100%;
+    }
+
+    #sadrzaj {
+        padding-top: 20px;
+    }
+
     #sjedista-grid {
         grid-template-columns: 22px repeat(10, 20px);
         gap: 6px;
@@ -213,11 +225,6 @@ body {
     #platno {
         font-size: 18px;
         padding: 18px 8px;
-    }
-
-    #legenda {
-        flex-direction: column;
-        gap: 10px;
     }
 }
 
