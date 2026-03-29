@@ -136,3 +136,106 @@ body {
 .rezervisano {
     background-color: #aeb7c3;
 }
+
+#legenda {
+    width: 490px;
+    border: 1px solid #a6a6a6;
+    background-color: #d9dbe0;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: center;
+}
+
+.stavka-legende {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.boja {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bcbcbc;
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    #meni {
+        position: static;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    #sadrzaj {
+        padding-top: 20px;
+    }
+
+    #podaci-o-filmu,
+    #platno,
+    #legenda {
+        width: 100%;
+        max-width: 490px;
+    }
+
+    #podaci-o-filmu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .info-kutija {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #sjedista-grid {
+        grid-template-columns: 22px repeat(10, 20px);
+        gap: 6px;
+    }
+
+    .oznaka-reda {
+        width: 20px;
+        height: 20px;
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    .sjediste {
+        width: 20px;
+        height: 20px;
+    }
+
+    #platno {
+        font-size: 18px;
+        padding: 18px 8px;
+    }
+
+    #legenda {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    #sjedista-grid {
+        grid-template-columns: 18px repeat(10, 17px);
+        gap: 4px;
+    }
+
+    .oznaka-reda {
+        width: 17px;
+        height: 17px;
+        line-height: 15px;
+        font-size: 10px;
+    }
+
+    .sjediste {
+        width: 17px;
+        height: 17px;
+    }
+}
