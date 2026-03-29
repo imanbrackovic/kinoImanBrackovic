@@ -46,3 +46,33 @@ body {
 #sadrzaj {
     padding: 90px 20px 30px 20px;
 }
+
+#podaci-o-filmu {
+    width: 490px;
+    border: 1px solid #aaaaaa;
+    background-color: #d9dbe0;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.info-kutija {
+    width: 140px;
+    border: 1px solid #a8a8a8;
+    background-color: #efefef;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.labela {
+    font-size: 12px;
+    color: #666666;
+}
+
+.vrijednost {
+    font-size: 16px;
+}
