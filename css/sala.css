@@ -93,3 +93,46 @@ body {
     padding: 24px 10px;
     margin-bottom: 36px;
 }
+
+#sala-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 42px;
+}
+
+#sjedista-grid {
+    display: grid;
+    grid-template-columns: 26px repeat(10, 24px);
+    gap: 8px;
+    align-items: center;
+}
+
+.oznaka-reda {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #b0b0b0;
+    background-color: #e9eaed;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.sjediste {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #c7c7c7;
+}
+
+.slobodno {
+    background-color: #16c24a;
+}
+
+.zauzeto {
+    background-color: #ff3b3b;
+}
+
+.rezervisano {
+    background-color: #aeb7c3;
+}
