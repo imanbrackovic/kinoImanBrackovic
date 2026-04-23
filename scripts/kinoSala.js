@@ -103,3 +103,25 @@ function prikaziSalu(projekcije, trenutniIndex) {
     }
 }
  
+function inicijalizujNavigaciju(projekcije, ref) {
+    var btnPrev = document.getElementById("btn-prethodna");
+    var btnNext = document.getElementById("btn-sljedeca");
+ 
+    if (btnPrev) {
+        btnPrev.addEventListener("click", function() {
+            if (ref.index > 0) {
+                ref.index--;
+                prikaziSalu(projekcije, ref.index);
+            }
+        });
+    }
+ 
+    if (btnNext) {
+        btnNext.addEventListener("click", function() {
+            if (ref.index < projekcije.length - 1) {
+                ref.index++;
+                prikaziSalu(projekcije, ref.index);
+            }
+        });
+    }
+}
