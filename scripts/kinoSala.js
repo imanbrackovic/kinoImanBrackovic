@@ -31,3 +31,19 @@ function validirajPodatke(projekcije) {
 
     return true;
 }
+
+function azurirajPodatkeOFilmu(projekcija) {
+    var kutije = document.querySelectorAll("#podaci-o-filmu .info-kutija");
+
+    if (kutije.length >= 1) {
+        kutije[0].querySelector(".vrijednost").textContent = projekcija.film;
+    }
+
+    if (kutije.length >= 2) {
+        kutije[1].querySelector(".vrijednost").textContent = projekcija.vrijeme;
+    }
+
+    if (kutije.length >= 3) {
+        kutije[2].querySelector(".vrijednost").textContent = projekcija.sala;
+    }
+}
