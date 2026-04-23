@@ -45,7 +45,7 @@ body {
 }
 
 #sadrzaj {
-    padding: 108px 26px 24px 26px;
+    padding: 108px 10px 24px 10px;
 }
 
 .sekcija {
@@ -62,16 +62,16 @@ body {
 
 .filmovi-grid {
     display: grid;
-    grid-template-columns: repeat(5, 144px);
-    gap: 26px;
+    grid-template-columns: repeat(5, 200px);
+    gap: 10px;
     justify-content: start;
     align-items: start;
 }
 
 .film {
-    width: 144px;
+    width: 200px;
     border: 1px solid #b6b6b6;
-    padding: 12px 10px 12px 10px;
+    padding: 12px 10px;
 }
 
 .white {
@@ -88,7 +88,7 @@ body {
 
 .poster {
     width: 100%;
-    height: 198px;
+    height: 260px;
     display: block;
     margin: 0 auto 10px auto;
     border: none;
@@ -98,7 +98,6 @@ body {
     overflow: hidden;
 }
 
-/* ZADRŽI puni, jasni izgled postera */
 .poster-oppenheimer,
 .poster-bloodgold,
 .poster-braven,
@@ -131,22 +130,20 @@ body {
     background-position: center center;
 }
 
-
 .poster-braven {
     background-image: url("../slike/braven.jpg");
-background-position: center center;
+    background-position: center center;
 }
 
 .poster-mafiawars {
     background-image: url("../slike/mafiawars.jpg");
-background-position: center center;
+    background-position: center center;
 }
 
 .poster-madmax {
     background-image: url("../slike/madmax.jpg");
     background-position: center center;
 }
-
 
 .poster-flashbacks {
     background-image: url("../slike/flashbacks.jpg");
@@ -202,43 +199,41 @@ background-position: center center;
     padding: 8px 10px;
     margin-top: 8px;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 830px) {
     .filmovi-grid {
-        grid-template-columns: repeat(4, 144px);
-        gap: 20px;
+        grid-template-columns: repeat(3, 200px);
     }
 }
 
-@media (max-width: 760px) {
-    .filmovi-grid {
-        grid-template-columns: repeat(3, 144px);
-        gap: 18px;
-    }
-}
-
-@media (max-width: 560px) {
+@media (max-width: 699px) {
     #meni {
         position: static;
-        gap: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
         padding: 12px;
-        flex-wrap: wrap;
+    }
+
+    #meni li {
+        display: block;
+        width: 100%;
+    }
+
+    #meni a {
+        display: block;
+        width: 100%;
+        min-width: 0;
     }
 
     #sadrzaj {
-        padding-top: 16px;
+        padding: 20px 10px 24px 10px;
     }
 
     .filmovi-grid {
-        grid-template-columns: repeat(2, 144px);
-        gap: 16px;
-    }
-}
-
-@media (max-width: 380px) {
-    .filmovi-grid {
-        grid-template-columns: 144px;
+        grid-template-columns: 200px;
+        gap: 10px;
     }
 }
