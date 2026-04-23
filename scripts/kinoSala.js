@@ -32,7 +32,6 @@ function ucitajStanje() {
 }
  
 function azurirajPodatkeOFilmu(projekcija) {
-    // Trazimo elemente .vrijednost unutar #podaci-o-filmu
     var kutije = document.querySelectorAll("#podaci-o-filmu .info-kutija");
  
     if (kutije.length >= 1) {
@@ -124,4 +123,26 @@ function inicijalizujNavigaciju(projekcije, ref) {
             }
         });
     }
+}
+
+function inicijalizujKinoSalu(defaultPodaci) {
+    var projekcije = ucitajStanje();
+
+    if (!projekcije) {
+        projekcije = defaultPodaci.projekcije;
+        sacuvajStanje(projekcije);
+    }
+ 
+    if (!validirajPodatke(projekcije)) {
+        var grid = document.getElementById("sjedista-grid");
+        if (grid) {
+            grid.innerHTML = "<p style='color:red;font-weight:bold;'>Podaci nisu validni!</p>";
+        }
+        return;
+    }
+ 
+    var ref = { index: 0 };
+ 
+    prikaziSalu(projekcije, ref.index);
+    inicijalizujNavigaciju(projekcije, ref);
 }
