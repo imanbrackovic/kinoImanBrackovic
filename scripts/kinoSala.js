@@ -11,3 +11,23 @@ function ucitajStanje() {
     }
     return null;
 }
+
+function validirajPodatke(projekcije) {
+    var validniStatusi = ["slobodno", "zauzeto", "rezervisano"];
+
+    if (!projekcije || projekcije.length === 0) {
+        return false;
+    }
+
+    for (var i = 0; i < projekcije.length; i++) {
+        var sjedista = projekcije[i].sjedista;
+
+        for (var j = 0; j < sjedista.length; j++) {
+            if (validniStatusi.indexOf(sjedista[j].status) === -1) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
